@@ -163,3 +163,26 @@ console.log(addressBookArray.toString());
     let contactToEdit = addressBookArray.find(findAndEditContact);
     console.log("\nUsing separate function: "+addressBookArray);
 }
+
+//UC5 DELETE A CONTACT
+{
+    for(let i=0;i<addressBookArray.length;i++){
+        if(addressBookArray[i].firstName=="Shyam"
+            &&addressBookArray[i].lastName=="Kumar")
+            delete addressBookArray[i];
+    }
+    console.log("\nAddress Book Array After Deleting Contact: "+addressBookArray)
+}
+
+//UC6 NUMBER OF CONTACTS IN ADDRESS BOOK USING REDUCE IN SEPARATE FUNCTION
+{
+    function totalContacts(totalContacts){
+        return ++totalContacts;
+    }
+    console.log("\nTotal Contacts With reduce using separate function: "+addressBookArray.reduce(totalContacts,0)); 
+}
+
+//UC6 NUMBER OF CONTACTS IN ADDRESS BOOK USING ARROW FUNCTION TO REDUCE
+{
+    console.log("Total Contacts With reduce using arrow => function: "+addressBookArray.reduce((totalContacts)=>++totalContacts,0));
+}
