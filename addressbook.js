@@ -203,3 +203,13 @@ function addContact(newContact){
 addContact(new Contact("Suraj","Kumar","Shyam Nagar","Kanpur","Uttar Pradesh","732106","91 6182755450","suraj@email.com"));
 console.log(addressBookArray.toString());
 
+
+//UC 8 Search Person In a City Or State
+function searchPersonInCity(firstName,city){
+    return addressBookArray.find(contact=>contact.firstName==firstName&&contact.city==city);
+}
+function searchPersonInState(firstName,state){
+    return addressBookArray.find(contact=>contact.firstName==firstName&&contact.state==state);
+}
+console.log("Search Person in a city : "+searchPersonInCity("Shuchita","Kanpur"));
+console.log("Search Person in a state : "+searchPersonInState("Shuchita","Uttar Pradesh"));
