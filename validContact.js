@@ -128,6 +128,16 @@ console.log(contact.toString());
     try{
         let contact2 = new Contact("Shuchita","Singh","Shyam Nagar","Kanpur","Uttar Pradesh","208007","91 9096795337","suchiemail.com");
     }catch(e){
+     
         console.error(e);
     }
 }
+
+let addressBookArray = new Array();
+addressBookArray.push(contact);
+addressBookArray.push(new Contact("Mark","Zuckerberg","Street 191","NewYork","New York","732106","11 6182755450","mark@email.com"));
+addressBookArray.push(new Contact("Bill","Gates","Street 250","Medina","Washington","723091","11 6817263541","bill@email.com"));
+addressBookArray.push(new Contact("Jeff","Bezos","Street 200","CityABC","Washington","772109","11 6385755850","jeff@email.com"));
+console.log(addressBookArray.toString());
+
+
