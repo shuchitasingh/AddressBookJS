@@ -135,9 +135,31 @@ console.log(contact.toString());
 
 let addressBookArray = new Array();
 addressBookArray.push(contact);
-addressBookArray.push(new Contact("Mark","Zuckerberg","Street 191","NewYork","New York","732106","11 6182755450","mark@email.com"));
-addressBookArray.push(new Contact("Bill","Gates","Street 250","Medina","Washington","723091","11 6817263541","bill@email.com"));
-addressBookArray.push(new Contact("Jeff","Bezos","Street 200","CityABC","Washington","772109","11 6385755850","jeff@email.com"));
+addressBookArray.push(new Contact("Suraj","Kumar","Shyam Nagar","Kanpur","Uttar Pradesh","732106","91 6182755450","surajk@email.com"));
+addressBookArray.push(new Contact("Devid","Dhawan","Navi Mumbai","Mumbai","Maharastra","723091","91 6817263541","devid@email.com"));
+addressBookArray.push(new Contact("Shyam","Kumar","Kidwai Nagar","Kanpur","Uttar Pradesh","772109","91 6385755850","shyam@email.com"));
 console.log(addressBookArray.toString());
 
 
+//UC4 USING ARROW FUNCTION 
+{
+    let contactToEdit = addressBookArray.find(contact=>contact.firstName=="Shyam"&&contact.lastName=="Kumar");
+    if(contactToEdit!=undefined){
+        contactToEdit.phone = "91 6123456789";
+        console.log("\nUsing arrow => function "+addressBookArray);
+    }
+    else 
+        console.log("\nContact not found");
+}
+
+//UC4 USING SEPARATE FUNCTION
+{
+    function findAndEditContact(contact){
+        if (contact.firstName == "Shyam" && contact.lastName == "Kumar"){
+            contact.phone = "91 6123456788";
+            return contact;
+        }
+    }
+    let contactToEdit = addressBookArray.find(findAndEditContact);
+    console.log("\nUsing separate function: "+addressBookArray);
+}
