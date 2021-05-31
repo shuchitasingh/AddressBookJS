@@ -137,7 +137,11 @@ let addressBookArray = new Array();
 addressBookArray.push(contact);
 addressBookArray.push(new Contact("Suraj","Kumar","Shyam Nagar","Kanpur","Uttar Pradesh","732106","91 6182755450","surajk@email.com"));
 addressBookArray.push(new Contact("Devid","Dhawan","Navi Mumbai","Mumbai","Maharastra","723091","91 6817263541","devid@email.com"));
+<<<<<<< HEAD
 addressBookArray.push(new Contact("Shyam","Kumar","Kidwai Nagar","Kanpur","Uttar Pradesh","772109","91 6385755850","shyam@email.com"));
+=======
+addressBookArray.push(new Contact("shyam","Dev","Kidwai Nagar","Kanpur","Uttar Pradesh","772109","91 6385755850","shyam@email.com"));
+>>>>>>> 1b8270f44e3760dcd1b6f1d90fa07e5eac93a72e
 console.log(addressBookArray.toString());
 
 
