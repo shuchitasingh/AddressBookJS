@@ -239,5 +239,27 @@ function countPersonsByCityOrState(name,type){
         console.log("Invalid choice");
     return count;
 }
-console.log("\nNumber of contacts in Kanpur City: "+countPersonsByCityOrState("Kanpur","City"));
-console.log("Number of contacts in Uttar Pradesh State: "+countPersonsByCityOrState("Uttar Pradesh","State"));
+console.log("\nNumber of contacts belonging City: "+countPersonsByCityOrState("Kanpur","City"));
+console.log("Number of contacts belonging State: "+countPersonsByCityOrState("Uttar Pradesh","State"));
+
+
+
+//UC 12 Sort Entries alphabetically
+function sortAddressBookBy(type){
+    switch(type){
+    case "name":
+        return addressBookArray.slice().sort();
+    case "city":
+        return addressBookArray.slice().sort((a,b)=>(a.city).localeCompare(b.city));
+    case "state":
+        return addressBookArray.slice().sort((a,b)=>(a.state).localeCompare(b.state));
+    case "zip":
+        return addressBookArray.slice().sort((a,b)=>(a.zip).localeCompare(b.zip));
+    }
+    
+}
+let sortedByName = sortAddressBookBy("name");
+console.log("\nSorted address book by name:" +sortedByName.toString());
+console.log("Sorted address book by city: "+sortAddressBookBy("city"));
+console.log("Sorted address book by state: "+sortAddressBookBy("state"));
+console.log("Sorted address book by zip: "+sortAddressBookBy("zip"));
