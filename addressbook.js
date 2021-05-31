@@ -213,3 +213,16 @@ function searchPersonInState(firstName,state){
 }
 console.log("Search Person in a city : "+searchPersonInCity("Shuchita","Kanpur"));
 console.log("Search Person in a state : "+searchPersonInState("Shuchita","Uttar Pradesh"));
+
+//UC9 View Persons By city or state
+function viewPersonsByCityOrState(name,type){
+    console.log("\nContacts in "+name+" "+type);
+    if(type=="City")
+        addressBookArray.filter(contact=>contact.city==name).forEach(contact=>process.stdout.write(contact.toString()));
+    else if(type=="State")
+        addressBookArray.filter(contact=>contact.state==name).forEach(contact=>process.stdout.write(contact.toString()));
+    else 
+        console.log("Invalid choice");
+}
+viewPersonsByCityOrState("Kanpur","City");
+viewPersonsByCityOrState("Uttar Pradesh","State");
